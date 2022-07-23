@@ -1,0 +1,61 @@
+
+.grid{
+    position: absolute;
+    width: 780px;
+    height:300px;
+    border: solid black 1px;
+    margin-top: 80px;
+
+}
+
+.block{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-image: linear-gradient(#28bbe4, #3c67e3 43%, #4e00c2);
+    border-radius: 5px;
+    
+}
+
+
+.user{
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    background-image: linear-gradient( #ee8989, #ff0000 43%, #4a0a0a);
+    border-radius: 10px;
+    
+}
+
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+}
+:root {
+	--card-height: 8vh;
+	--card-width: calc(var(--card-height) / 0.2);
+    margin: auto;
+}
+@keyframes spin {
+	0% {
+		--rotate: 0deg;
+	}
+	100% {
+		--rotate: 360deg;
+	}
+}
+
+.ball{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: green;
+    background-image: linear-gradient(
+		var(--rotate)
+		, #1df825, #1a7c2e 43%, #04510c);
+    animation: spin 1.5s linear infinite;
+
+}
+
